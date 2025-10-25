@@ -11,11 +11,16 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 
+
+
+
+
+
+
+
 @Mod(CloudBackupMod.MODID)
-public class CloudBackupMod {
-    // Define mod id in a common place for everything to reference
+public class CloudBackupMod{
     public static final String MODID = "cloudbackupmod";
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
