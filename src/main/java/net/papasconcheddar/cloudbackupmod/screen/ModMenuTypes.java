@@ -1,4 +1,5 @@
 package net.papasconcheddar.cloudbackupmod.screen;
+import net.papasconcheddar.cloudbackupmod.screen.custom.PanelMenu;
 import net.papasconcheddar.cloudbackupmod.screen.custom.PanelScreen;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -14,8 +15,8 @@ public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(Registries.MENU, CloudBackupMod.MODID);
 
-    public static final DeferredHolder<MenuType<?>, MenuType<PanelScreen>> PEDESTAL_MENU =
-            registerMenuType("pedestal_menu", PanelScreen::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<PanelMenu>> PEDESTAL_MENU =
+            registerMenuType("pedestal_menu", PanelMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {
