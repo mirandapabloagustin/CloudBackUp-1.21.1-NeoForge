@@ -18,7 +18,7 @@ public class PanelMenu extends AbstractContainerMenu {
     }
 
     public PanelMenu(int containerId, Inventory inv, BlockEntity blockEntity) {
-        super(ModMenuTypes.PEDESTAL_MENU.get(), containerId);
+        super(ModMenuTypes.PANEL_MENU.get(), containerId);
         this.level = inv.player.level();
     }
 

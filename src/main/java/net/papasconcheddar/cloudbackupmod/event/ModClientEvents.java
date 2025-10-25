@@ -8,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.papasconcheddar.cloudbackupmod.CloudBackupMod;
+import net.papasconcheddar.cloudbackupmod.screen.custom.PanelScreen;
 import net.papasconcheddar.cloudbackupmod.util.KeyBinding;
 
 public class ModClientEvents {
@@ -20,8 +21,10 @@ public class ModClientEvents {
     public static class ClientForgeEvents {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event) {
+            Minecraft mc = Minecraft.getInstance();
             if(KeyBinding.BACKUP_MENU_KEY.consumeClick()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pressed a Key!"));
+                mc.setScreen(new PanelScreen(menu, playerInventory, title));
             }
         }
 

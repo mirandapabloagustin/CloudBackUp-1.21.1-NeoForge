@@ -15,8 +15,8 @@ public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(Registries.MENU, CloudBackupMod.MODID);
 
-    public static final DeferredHolder<MenuType<?>, MenuType<PanelMenu>> PEDESTAL_MENU =
-            registerMenuType("pedestal_menu", PanelMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<PanelMenu>> PANEL_MENU =
+            registerMenuType("panel_menu", PanelMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {
