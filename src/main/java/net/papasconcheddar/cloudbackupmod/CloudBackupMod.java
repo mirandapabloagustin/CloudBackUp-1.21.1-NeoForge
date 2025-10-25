@@ -1,5 +1,4 @@
 package net.papasconcheddar.cloudbackupmod;
-import net.papasconcheddar.cloudbackupmod.screen.ModMenuTypes;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
@@ -20,7 +19,6 @@ public class CloudBackupMod{
     public CloudBackupMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
-        ModMenuTypes.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
