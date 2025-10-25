@@ -24,7 +24,7 @@ public class ModClientEvents {
             Minecraft mc = Minecraft.getInstance();
             if(KeyBinding.BACKUP_MENU_KEY.consumeClick()) {
                 mc.player.sendSystemMessage(Component.literal("Pressed a Key!"));
-                mc.setScreen(new Panel("¿Activar modo turbo?"));
+                mc.setScreen(new Panel());
             }
         }
 
